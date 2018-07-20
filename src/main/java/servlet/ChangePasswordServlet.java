@@ -22,7 +22,7 @@ public class ChangePasswordServlet extends HttpServlet {
         String newPassword2 = request.getParameter("newPassword2");
         String uid = (String) request.getSession().getAttribute("uid");
         
-        //�ж��û��Ƿ��¼
+        //判断用户是否登录
         if (!Util.isEmpty(uid)) {
             UserDao userDao = new UserDao();
             User user = userDao.findById(Integer.valueOf(uid));
@@ -39,16 +39,16 @@ public class ChangePasswordServlet extends HttpServlet {
                             e.printStackTrace();
                         }
                     } else {
-                      //������������벻һ��  
+                      //输入的两次密码不一致 
                     }
                 } else {
-                    //�����������
+                    //密码输入错误
                 }
             } else {
-                //����Ϊ��
+                //输入为空
             }
         } else {
-            //δ��¼
+            //未登录
         }
         
 

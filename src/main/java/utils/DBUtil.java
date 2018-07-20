@@ -1,3 +1,4 @@
+
 package utils;
 
 import java.sql.Connection;
@@ -12,7 +13,7 @@ public class DBUtil {
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            System.out.println("���ݿ���������ʧ�ܡ�����������");
+            System.out.println("数据库驱动加载失败");
             e.printStackTrace();
         }
     }
@@ -25,7 +26,7 @@ public class DBUtil {
         try {
             conn = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
-            System.out.println("���ݿ�����ʧ�ܡ�����������");
+            System.out.println("数据库连接失败");
             e.printStackTrace();
         }
         
