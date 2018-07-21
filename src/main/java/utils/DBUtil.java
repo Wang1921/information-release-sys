@@ -20,11 +20,9 @@ public class DBUtil {
     
     public Connection connect() {
         String url = "jdbc:mysql://localhost:3306/test";
-        String user = "root";
-        String password = "insert2333";
         
         try {
-            conn = DriverManager.getConnection(url, user, password);
+            conn = DriverManager.getConnection(url);
         } catch (SQLException e) {
             System.out.println("数据库连接失败");
             e.printStackTrace();
