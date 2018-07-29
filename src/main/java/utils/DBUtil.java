@@ -19,7 +19,7 @@ public class DBUtil {
     }
     
     public Connection connect() {
-        String url = "jdbc:mysql://localhost:3306/test";
+        String url = "jdbc:mysql://192.168.3.42:3306/test";
         String user = "remote";
         String password = "123456";
         
